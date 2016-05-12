@@ -17,6 +17,8 @@ gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 # user login
 gem 'devise', '~> 4.1'
+# bootstrap
+gem 'bootstrap-sass', '~> 3.3.6'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

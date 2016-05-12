@@ -1,0 +1,9 @@
+%h1 Detalles Documento
+%div
+    %h3{class: "page-header"}= @docu.title
+    %span.badge= @docu.created_at
+%div.well=@docu.content
+
+=link_to "Documentos", docs_path, class: "btn btn-primary"
+=link_to "Editar Documento", edit_doc_path(@docu), class: "btn"
+=link_to "Eliminar Documento", doc_path(@docu),method: :delete, data: {confirm: "Confirmar eliminación"}, class: "btn"

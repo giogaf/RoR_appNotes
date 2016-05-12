@@ -38,4 +38,6 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  
+  config.action_mailer.default_url_options = { host: 'blog-testrails.c9users.io', port: 8000 }
 end

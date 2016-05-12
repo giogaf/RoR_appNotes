@@ -1,0 +1,27 @@
+%html
+%head
+    %title Docu App
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true 
+    = csrf_meta_tags 
+%body
+    %header{class:'navbar navbar-inverse navbar-fixed-top'}
+        %div{class:'container'}
+            %div{class: 'navbar-header'}
+                %a{href: (url_for root_path), class:'navbar-brand'}
+                    'DOCAPP'
+            %ul{class:'nav navbar-nav'}
+                %li
+                    =link_to "Ver Notas", docs_path                
+                - if user_signed_in?
+                    %li
+                        =link_to "Crear Nota", new_doc_path
+                    %li
+                        =link_to "Salir", destroy_user_session_path,method: :delete                        
+                -else
+                    %li
+                        =link_to "Ingresar",  new_user_session_path
+    .container
+        %p.notice= notice
+        %p.alert=alert
+        =yield

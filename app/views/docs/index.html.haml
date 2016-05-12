@@ -1,0 +1,9 @@
+- @docu.each do |d|
+    %div{class:'col-sm-6'}
+        %div{class:'panel panel-default'}
+            %div{class:'panel-heading'}
+                %a{href:(url_for [d])}
+                    %h3= d.title
+            %div{class:'panel-body'}
+                %p=  truncate(d.content,length:50)  
+                %span.badge= time_tag(d.created_at)

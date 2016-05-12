@@ -1,3 +1,4 @@
-%h1 hola
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+%div.jumbotron
+    %h1="Docapp"
+    %p.lead='Tus notas online'
+    =link_to "Registrarme Ya",new_user_session_path,role:'button', class:'btn btn-lg btn-success'
